@@ -5,9 +5,8 @@
 
 after_initialize do
 
-  # hide posts from the /raw/tid/pid route
+  # change permissions on topic deletion
   module ::TopicGuardian
-    # alias_method :org_can_see_post?, :can_see_post?
 
     def can_delete_topic?(topic)
       !topic.trashed? &&
