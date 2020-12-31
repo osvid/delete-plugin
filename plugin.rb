@@ -6,7 +6,7 @@
 after_initialize do
 
   # change permissions on topic deletion
-  module ::TopicGuardian
+  module TopicGuardian
 
     def can_delete_topic?(topic)
       !topic.trashed? &&
