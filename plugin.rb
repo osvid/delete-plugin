@@ -16,4 +16,5 @@ after_initialize do
       !Discourse.static_doc_topic_ids.include?(topic.id)
             
     end   
+  end
 end
