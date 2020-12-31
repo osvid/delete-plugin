@@ -12,7 +12,7 @@ after_initialize do
       !topic.trashed? &&
       (is_staff? || (is_my_own?(topic) || is_category_group_moderator?(topic.category)) &&
       !topic.is_category_topic? &&
-      !Dis0course.static_doc_topic_ids.include?(topic.id)
+      !Discourse.static_doc_topic_ids.include?(topic.id)
     end
   end
 end
